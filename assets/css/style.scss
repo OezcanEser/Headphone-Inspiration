@@ -24,6 +24,8 @@ body {
 
 header ul {
     display: flex;
+    padding: 2% 3%;
+    align-items: center;
 }
 
 a {
@@ -85,5 +87,5 @@ section p {
     grid-column: 7 / 12;
     grid-row: 4 / 5;
     margin-left: 10%;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
