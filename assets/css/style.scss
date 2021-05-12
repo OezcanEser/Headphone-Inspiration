@@ -1,0 +1,89 @@
+/* Font: Work sans */
+/* Farben: #2e2e2e / #867772 / rgb(234, 204, 194) / #ebccc2 / #fff / rgb(115, 115, 115) */
+// font-family: 'Work Sans', sans-serif;
+
+$bg-color: #2e2e2e;
+$nav-color: #867772;
+$h-color: #ebccc2;
+$p-color: rgb(115, 115, 115);
+$hover-color: #fff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    background-color: $bg-color;
+}
+
+header ul {
+    display: flex;
+}
+
+a {
+    color: $nav-color;
+}
+
+h1, h2 {
+    color: $h-color;
+}
+
+p {
+    color: $p-color;
+}
+
+aside {
+    position: sticky;
+    top: 50%;
+    margin-left: 8vh;
+}
+
+section {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 5vw;
+    row-gap: 5vh;
+    padding-bottom: 15vh;
+}
+
+section h1 {
+    font-size: 2rem;
+    grid-column: 4 / 10;
+    grid-row: 1 / 2;
+}
+
+section img:nth-of-type(1) {
+    width: 100%;
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
+}
+
+section img:nth-of-type(2) {
+    width: 100%;
+    grid-column: 2 / 7;
+    grid-row: 3 / 6;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    grid-column: 7 / 12;
+    grid-row: 3 / 4;
+}
+
+section p:nth-of-type(1) {
+    grid-column: 7 / 12;
+    grid-row: 4 / 5;
+}
+
+section p:nth-of-type(2) {
+    grid-column: 7 / 12;
+    grid-row: 5 / 6;
+}
