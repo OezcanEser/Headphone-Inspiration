@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    list-style: none;
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
 }
@@ -22,7 +21,7 @@ a {
     color: #867772;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
     color: #ebccc2;
 }
 
@@ -30,9 +29,9 @@ p {
     color: rgb(115, 115, 115);
 }
 
-$hover-color: #fff;
-
 // colors end
+
+// header start
 
 header,
 footer {
@@ -41,9 +40,51 @@ footer {
 
 header {
     top: 0%;
+    ul {
+        list-style: none;
+        align-items: center;
+        padding: 2% 3%;
+        display: flex;
+
+        li:nth-of-type(1) {
+            flex-grow: 1;
+        }
+
+        li:nth-of-type(2) {
+            margin-right: 4%;
+        }
+
+        li:nth-of-type(3),
+        li:nth-of-type(4),
+        li:nth-of-type(5) {
+            margin: 0 1%;
+        }
+
+        li:nth-of-type(6) {
+            margin: 0 4%;
+        }
+    }
 }
 
-#about {
+// header end
+
+// hover start
+
+a {
+    cursor: pointer;
+    transition: all 1s;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+// hover end
+
+// about start
+
+#aboutSection {
     width: 90%;
     margin: 0 auto;
     img {
@@ -53,48 +94,29 @@ header {
 
 h1 {
     margin: 5% 0 10%;
+    font-size: 2.5rem;
+    width: 35%;
+    margin-left: 25%;
+}
+    
+#homeFigure {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10%;
 }
 
-@media (min-width: 0px) {
-    
+#homeFigure img {
+    width: 50%;
 }
 
+// about end
 
-// desktop
+// figcaption start
 
-@media (min-width: 1025px) {
-    header nav {
-        display: flex;
-        align-items: center;
-        padding: 2% 3%;
-    }
-
-    header nav ul {
-        display: flex;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-        width: 35%;
-        margin-left: 25%;
-    }
-        
-    figure {
-        display: flex;
-        align-items: center;
-        width: 80%;
-        margin: 0 auto;
-        padding-top: 10%;
-    }
-    
-    figure #boxImg {
-        width: 50%;
-    }
-
-    figcaption {
-        padding-left: 10%;
-    }
-
+figcaption {
+    padding-left: 10%;
     h2 {
         font-size: 2rem;
         margin-bottom: 5%;
@@ -104,9 +126,15 @@ h1 {
         line-height: 3vh;
         margin-bottom: 1.5vh;
     }
-
-    footer {
-        position: sticky;
-        bottom: 50%;
-    }
 }
+
+// figcaption end
+
+// footer start
+
+footer {
+    position: sticky;
+    bottom: 50%;
+}
+
+// footer end
