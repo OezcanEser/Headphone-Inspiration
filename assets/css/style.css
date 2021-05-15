@@ -13,7 +13,7 @@ body {
   background-color: #2e2e2e;
 }
 
-a {
+header a {
   color: #867772;
 }
 
@@ -23,7 +23,7 @@ h1, h2, h3, h4 {
 
 p,
 input[type="button"],
-ul {
+footer a {
   color: #737373;
 }
 
@@ -38,7 +38,7 @@ header {
 }
 
 footer {
-  bottom: 50%;
+  bottom: 15%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -285,17 +285,23 @@ header ul li:nth-of-type(6) {
 #shop footer {
   -ms-grid-column: 1;
   grid-column: 1 / 1;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
 }
 
-footer nav {
-  margin-left: 50%;
+footer li {
+  margin-bottom: 10vh;
 }
 
-footer ul li:before {
-  content: "\f10c";
-  font-size: 28px;
+footer a {
+  margin-left: 5vw;
+}
+
+footer a:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 1px solid #737373;
+  position: absolute;
+  left: 5%;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */
