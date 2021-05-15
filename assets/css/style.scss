@@ -23,7 +23,8 @@ h1, h2, h3, h4 {
     color: #ebccc2;
 }
 
-p {
+p,
+input[type="button"] {
     color: rgb(115, 115, 115);
 }
 
@@ -42,6 +43,8 @@ footer {
     bottom: 50%;
 }
 
+// font sizes
+
 // hover elements
 
 a {
@@ -52,13 +55,6 @@ a {
 a:hover {
     color: #fff;
     text-decoration: underline;
-}
-
-// sections style
-
-#about {
-    width: 90%;
-    margin: 0 auto;
 }
 
 // header style
@@ -94,8 +90,11 @@ header {
 // about site style
 
 #about {
-    img {
+    width: 90%;
+    margin: 0 auto;
+    > img {
         width: 100%;
+        margin-bottom: 10%;
     }
     h1 {
         margin: 5% 0 10%;
@@ -108,17 +107,15 @@ header {
         align-items: center;
         width: 80%;
         margin: 0 auto;
-        padding-top: 10%;
         img {
             width: 50%;
         }
         figcaption {
             padding-left: 10%;
             h2 {
-                font-size: 2rem;
+                font-size: 2.5rem;
                 margin-bottom: 5%;
             }
-        
             p {
                 line-height: 3vh;
                 margin-bottom: 1.5vh;
@@ -127,9 +124,11 @@ header {
     }
 }
 
-// lounger site style
+// lounger, experience and shop site style
 
-#lounger {
+#lounger,
+#experience,
+#shop {
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -152,5 +151,47 @@ header {
     footer {
         grid-column: 1 / 1;
         grid-row: 2 / 3;
+    }
+}
+
+// inspiration site style
+
+#inspiration {
+    width: 60%;
+    margin: 0 auto;
+    video {
+        width: 90%;
+        margin: 10% 5%;
+    }
+    h3 {
+        font-size: 1.3 rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 5%;
+    }
+    input[type="button"] {
+        background-color: transparent;
+        border: 1px solid #fff;
+        padding: 0.5% 1.5%;
+        margin-bottom: 5%;
+    }
+    > p {
+        margin-bottom: 10%;
+    }
+    figure {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        img {
+            width: 50%;
+        }
+        figcaption {
+            padding-left: 5%;        
+            p {
+                line-height: 3vh;
+                margin-bottom: 1.5vh;
+            }
+        }
     }
 }
