@@ -1,4 +1,4 @@
-// reset start
+// reset
 
 * {
     margin: 0;
@@ -9,11 +9,7 @@
     font-weight: 300;
 }
 
-// reset end
-
-
-
-// colors start
+// color elements
 
 body {
     background-color: #2e2e2e;;
@@ -31,11 +27,7 @@ p {
     color: rgb(115, 115, 115);
 }
 
-// colors end
-
-
-
-// header start
+// sticky elements
 
 header,
 footer {
@@ -43,7 +35,35 @@ footer {
 }
 
 header {
-    top: 0%;
+    top: 0;
+}
+
+footer {
+    bottom: 50%;
+}
+
+// hover elements
+
+a {
+    cursor: pointer;
+    transition: all 1s;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+// sections style
+
+#about {
+    width: 90%;
+    margin: 0 auto;
+}
+
+// header style
+
+header {
     ul {
         list-style: none;
         align-items: center;
@@ -71,110 +91,66 @@ header {
     }
 }
 
-// header end
+// about site style
 
-
-
-// hover start
-
-a {
-    cursor: pointer;
-    transition: all 1s;
-}
-
-a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-// hover end
-
-
-
-//figure start
-
-figure {
-    display: flex;
-    align-items: center;
-}
-
-// figure end
-
-
-
-// figcaption start
-
-figcaption {
-    padding-left: 10%;
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 5%;
-    }
-
-    p {
-        line-height: 3vh;
-        margin-bottom: 1.5vh;
-    }
-}
-
-// figcaption end
-
-
-
-// default width start
-
-#aboutSection,
-#inspiriSection {
-    width: 90%;
-    margin: 0 auto;
-}
-
-// default width end
-
-
-
-// about start
-
-#aboutSection {
+#about {
     img {
         width: 100%;
     }
+    h1 {
+        margin: 5% 0 10%;
+        font-size: 2.5rem;
+        width: 35%;
+        margin-left: 25%;
+    }
+    figure {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 10%;
+        img {
+            width: 50%;
+        }
+        figcaption {
+            padding-left: 10%;
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 5%;
+            }
+        
+            p {
+                line-height: 3vh;
+                margin-bottom: 1.5vh;
+            }
+        }
+    }
 }
 
-h1 {
-    margin: 5% 0 10%;
-    font-size: 2.5rem;
-    width: 35%;
-    margin-left: 29%;
+// lounger site style
+
+#lounger {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    > img {
+        grid-column: 1 / 3;
+        grid-row: 1 / 4;
+        max-width: 90%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    header {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    main {
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+        padding-right: 20%;
+    }
+    footer {
+        grid-column: 1 / 1;
+        grid-row: 2 / 3;
+    }
 }
-    
-#homeFigure {
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 10%;
-}
-
-#homeFigure img {
-    width: 50%;
-}
-
-// about end
-
-
-
-// inspiri start
-
-
-
-// inspiri end
-
-
-
-// footer start
-
-footer {
-    position: sticky;
-    bottom: 50%;
-}
-
-// footer end
