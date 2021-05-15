@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
 }
@@ -12,7 +13,7 @@
 // color elements
 
 body {
-    background-color: #2e2e2e;;
+    background-color: #2e2e2e;
 }
 
 a {
@@ -24,7 +25,8 @@ h1, h2, h3, h4 {
 }
 
 p,
-input[type="button"] {
+input[type="button"],
+ul {
     color: rgb(115, 115, 115);
 }
 
@@ -41,6 +43,7 @@ header {
 
 footer {
     bottom: 50%;
+    display: inline-flex;
 }
 
 // font sizes
@@ -61,7 +64,6 @@ a:hover {
 
 header {
     ul {
-        list-style: none;
         align-items: center;
         padding: 2% 3%;
         display: flex;
@@ -87,39 +89,83 @@ header {
     }
 }
 
-// about site style
+// about and inspiration site style
 
 #about {
     width: 90%;
+
+}
+
+#inspiration {
+    width: 60%;
+}
+
+#about,
+#inspiration {
     margin: 0 auto;
+
+    > video {
+        width: 90%;
+        margin: 10% 5%;
+    }
+
     > img {
         width: 100%;
         margin-bottom: 10%;
     }
+
     h1 {
         margin: 5% 0 10%;
         font-size: 2.5rem;
         width: 35%;
         margin-left: 25%;
     }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 5%;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5%;
+    }
+
+    input[type="button"] {
+        background-color: transparent;
+        border: 1px solid #fff;
+        padding: 0.5% 1.5%;
+        margin-bottom: 1.5%;
+    }
+
+    > p {
+        margin-bottom: 10%;
+    }
+    
+    .exFigStyle {
+        width: 80%;
+    }
+
     figure {
         display: flex;
         align-items: center;
-        width: 80%;
         margin: 0 auto;
+
         img {
             width: 50%;
         }
+
         figcaption {
             padding-left: 10%;
-            h2 {
-                font-size: 2.5rem;
-                margin-bottom: 5%;
-            }
+
             p {
                 line-height: 3vh;
-                margin-bottom: 1.5vh;
+                margin-bottom: 2%;
             }
+        }
+
+        .capExStyle {
+            padding-left: 5%;        
         }
     }
 }
@@ -132,6 +178,7 @@ header {
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
     > img {
         grid-column: 1 / 3;
         grid-row: 1 / 4;
@@ -139,59 +186,72 @@ header {
         height: 100vh;
         object-fit: cover;
     }
+
     header {
         grid-column: 1 / -1;
         grid-row: 1 / 2;
     }
+
     main {
         grid-column: 3 / 4;
         grid-row: 2 / 4;
-        padding-right: 20%;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            line-height: 3vh;
+        }
     }
+
+    #louExMain {
+        h2 {
+            margin-bottom: 20%;
+        }
+
+        p {
+            padding-right: 20%;
+            margin-bottom: 2%
+        }
+    }
+
+    #shopMain {
+        text-align: center;
+
+        h2 {
+            margin-bottom: 5%;
+        }
+
+        p {
+            margin-bottom: 5%;
+        }
+
+        a {
+            background-color: #ebccc2;
+            padding: 2% 4%;
+            border-radius: 5px;
+            font-weight: normal;
+            margin-top: 10vh;
+            color: #2e2e2e;
+        }
+    }
+
     footer {
         grid-column: 1 / 1;
         grid-row: 2 / 3;
     }
 }
 
-// inspiration site style
+// footer navi stlye
 
-#inspiration {
-    width: 60%;
-    margin: 0 auto;
-    video {
-        width: 90%;
-        margin: 10% 5%;
-    }
-    h3 {
-        font-size: 1.3 rem;
-    }
-    h2 {
-        font-size: 2.5rem;
-        margin-bottom: 5%;
-    }
-    input[type="button"] {
-        background-color: transparent;
-        border: 1px solid #fff;
-        padding: 0.5% 1.5%;
-        margin-bottom: 5%;
-    }
-    > p {
-        margin-bottom: 10%;
-    }
-    figure {
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
-        img {
-            width: 50%;
-        }
-        figcaption {
-            padding-left: 5%;        
-            p {
-                line-height: 3vh;
-                margin-bottom: 1.5vh;
-            }
-        }
+footer {
+    nav {
+        margin-left: 50%;
+        
+    } 
+    ul li:before {
+        content: "\f10c";
+        font-size: 28px;
     }
 }

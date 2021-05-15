@@ -4,6 +4,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
 }
@@ -21,7 +22,8 @@ h1, h2, h3, h4 {
 }
 
 p,
-input[type="button"] {
+input[type="button"],
+ul {
   color: #737373;
 }
 
@@ -37,6 +39,9 @@ header {
 
 footer {
   bottom: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 a {
@@ -51,7 +56,6 @@ a:hover {
 }
 
 header ul {
-  list-style: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -84,48 +88,97 @@ header ul li:nth-of-type(6) {
 
 #about {
   width: 90%;
+}
+
+#inspiration {
+  width: 60%;
+}
+
+#about,
+#inspiration {
   margin: 0 auto;
 }
 
-#about > img {
+#about > video,
+#inspiration > video {
+  width: 90%;
+  margin: 10% 5%;
+}
+
+#about > img,
+#inspiration > img {
   width: 100%;
   margin-bottom: 10%;
 }
 
-#about h1 {
+#about h1,
+#inspiration h1 {
   margin: 5% 0 10%;
   font-size: 2.5rem;
   width: 35%;
   margin-left: 25%;
 }
 
-#about figure {
+#about h2,
+#inspiration h2 {
+  font-size: 2.5rem;
+  margin-bottom: 5%;
+}
+
+#about h3,
+#inspiration h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5%;
+}
+
+#about input[type="button"],
+#inspiration input[type="button"] {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 0.5% 1.5%;
+  margin-bottom: 1.5%;
+}
+
+#about > p,
+#inspiration > p {
+  margin-bottom: 10%;
+}
+
+#about .exFigStyle,
+#inspiration .exFigStyle {
+  width: 80%;
+}
+
+#about figure,
+#inspiration figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
   margin: 0 auto;
 }
 
-#about figure img {
+#about figure img,
+#inspiration figure img {
   width: 50%;
 }
 
-#about figure figcaption {
+#about figure figcaption,
+#inspiration figure figcaption {
   padding-left: 10%;
 }
 
-#about figure figcaption h2 {
-  font-size: 2.5rem;
-  margin-bottom: 5%;
+#about figure figcaption p,
+#inspiration figure figcaption p {
+  line-height: 3vh;
+  margin-bottom: 2%;
 }
 
-#about figure figcaption p {
-  line-height: 3vh;
-  margin-bottom: 1.5vh;
+#about figure .capExStyle,
+#inspiration figure .capExStyle {
+  padding-left: 5%;
 }
 
 #lounger,
@@ -171,7 +224,60 @@ header ul li:nth-of-type(6) {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   grid-row: 2 / 4;
+}
+
+#lounger main h2,
+#experience main h2,
+#shop main h2 {
+  font-size: 2.5rem;
+}
+
+#lounger main p,
+#experience main p,
+#shop main p {
+  line-height: 3vh;
+}
+
+#lounger #louExMain h2,
+#experience #louExMain h2,
+#shop #louExMain h2 {
+  margin-bottom: 20%;
+}
+
+#lounger #louExMain p,
+#experience #louExMain p,
+#shop #louExMain p {
   padding-right: 20%;
+  margin-bottom: 2%;
+}
+
+#lounger #shopMain,
+#experience #shopMain,
+#shop #shopMain {
+  text-align: center;
+}
+
+#lounger #shopMain h2,
+#experience #shopMain h2,
+#shop #shopMain h2 {
+  margin-bottom: 5%;
+}
+
+#lounger #shopMain p,
+#experience #shopMain p,
+#shop #shopMain p {
+  margin-bottom: 5%;
+}
+
+#lounger #shopMain a,
+#experience #shopMain a,
+#shop #shopMain a {
+  background-color: #ebccc2;
+  padding: 2% 4%;
+  border-radius: 5px;
+  font-weight: normal;
+  margin-top: 10vh;
+  color: #2e2e2e;
 }
 
 #lounger footer,
@@ -184,56 +290,12 @@ header ul li:nth-of-type(6) {
   grid-row: 2 / 3;
 }
 
-#inspiration {
-  width: 60%;
-  margin: 0 auto;
+footer nav {
+  margin-left: 50%;
 }
 
-#inspiration video {
-  width: 90%;
-  margin: 10% 5%;
-}
-
-#inspiration h3 {
-  font-size: 1.3 rem;
-}
-
-#inspiration h2 {
-  font-size: 2.5rem;
-  margin-bottom: 5%;
-}
-
-#inspiration input[type="button"] {
-  background-color: transparent;
-  border: 1px solid #fff;
-  padding: 0.5% 1.5%;
-  margin-bottom: 5%;
-}
-
-#inspiration > p {
-  margin-bottom: 10%;
-}
-
-#inspiration figure {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 auto;
-}
-
-#inspiration figure img {
-  width: 50%;
-}
-
-#inspiration figure figcaption {
-  padding-left: 5%;
-}
-
-#inspiration figure figcaption p {
-  line-height: 3vh;
-  margin-bottom: 1.5vh;
+footer ul li:before {
+  content: "\f10c";
+  font-size: 28px;
 }
 /*# sourceMappingURL=style.css.map */
