@@ -75,8 +75,6 @@ h2, p {
     padding-top: 5%;
     text-align: center;
 
-
-
     a {
         background-color: #ebccc2;
         padding: 2% 4%;
@@ -211,7 +209,7 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
     }
 
     #shop {
-        > img{
+        > img {
             display: none;
         }
         img {
@@ -240,6 +238,7 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         display: flex;
         justify-content: space-evenly;
         margin-bottom: 5%;
+
         li {
             border-left: 1px solid #ebccc2;
             border-right: 1px solid #ebccc2;
