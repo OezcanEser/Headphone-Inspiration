@@ -130,9 +130,9 @@ header ul, .sidenav {
 
 .sidenav section input[type="button"] {
   background-color: #ebccc2;
+  border-style: none;
   padding: 2%;
   width: 100%;
-  border: 1px solid #ebccc2;
   border-radius: 5px;
   font-weight: normal;
   margin-top: 5%;
@@ -216,6 +216,10 @@ header ul, .sidenav {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     margin-bottom: 5%;
+  }
+  footer ul li {
+    border-left: 1px solid #ebccc2;
+    border-right: 1px solid #ebccc2;
   }
 }
 

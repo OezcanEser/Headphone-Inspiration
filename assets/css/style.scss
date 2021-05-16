@@ -10,9 +10,7 @@
     font-weight: 300;
 }
 
-
-
-// color elements
+// color setup
 
 body,
 .sidenav {
@@ -31,9 +29,7 @@ h1, h2, h3, h4, a.closebtn {
     color: #ebccc2;
 }
 
-
-
-// all screens style
+// all screens setup
 
 #about,
 #inspiration {
@@ -57,17 +53,13 @@ h1, h2, h3, h4, a.closebtn {
     margin-bottom: 1.5%;
 }
 
-
-
-// header style
+// header
 header {
     width: 100%;
     padding: 2% 3%;
 }
 
-
-
-// shop style
+// shop
 
 .shopStyle {
     padding-top: 5%;
@@ -91,15 +83,11 @@ header {
     }
 }
 
-
-
-// flex style
+// flex
 
 figure, .sidenav, #lounger, #experience, #shop, header ul {
     display: flex;
 }
-
-
 
 // align items
 
@@ -107,9 +95,7 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
     align-items: center;
  }
 
-
-
-// Subscribe and Contact style
+// Subscribe and Contact
 
 .sidenav {
     flex-flow: column;
@@ -146,9 +132,9 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
 
         input[type="button"] {
             background-color: #ebccc2;
+            border-style: none;
             padding: 2%;
             width: 100%;
-            border: 1px solid #ebccc2;
             border-radius: 5px;
             font-weight: normal;
             margin-top: 5%;
@@ -168,16 +154,17 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
     font-size: 36px;
 }
 
+// mobile divices setup
+
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
 
-
-
-// mobile divices
-
 @media (max-width: 768px) {
+
+    // header
+
     header {
         ul {
             justify-content: space-between;
@@ -198,6 +185,8 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         display: none;
         }
     }
+
+    // mobile only
 
     #lounger,
     #experience,
@@ -228,22 +217,27 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
             padding: 5% 0;
         }
     }
+
     #inspiration {
         > video {
             width: 100%;
         }
     }
 
+    // footer
+
     footer ul {
         display: flex;
         justify-content: space-evenly;
         margin-bottom: 5%;
+        li {
+            border-left: 1px solid #ebccc2;
+            border-right: 1px solid #ebccc2;
+        }
     }
 }
 
-
-
-// above mobile divices
+// above mobile divices setup
 
 @media (min-width: 787px) {
 
@@ -316,7 +310,7 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         }
     }
 
-    // about and inspiration site style
+    // about and inspiration site
 
     #inspiration {
         width: 60%;
@@ -379,7 +373,7 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         }
     }
 
-    // lounger, experience and shop site style
+    // lounger, experience and shop site
 
     #lounger,
     #experience,
@@ -414,7 +408,7 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         }
     }
 
-    // footer navi stlye
+    // footer navi
 
     footer {
         bottom: 15%;
