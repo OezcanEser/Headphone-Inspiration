@@ -26,6 +26,15 @@ h1, h2, h3, h4, a.closebtn {
   color: #ebccc2;
 }
 
+header, footer {
+  position: fixed;
+}
+
+header {
+  width: 100%;
+  top: 0;
+}
+
 #about,
 #inspiration {
   width: 90%;
@@ -36,7 +45,6 @@ h1, h2, h3, h4, a.closebtn {
 #about img,
 #inspiration img {
   width: 100%;
-  margin-bottom: 10%;
 }
 
 #about h1,
@@ -44,105 +52,31 @@ h1, h2, h3, h4, a.closebtn {
   margin-bottom: 10%;
 }
 
-header, footer {
-  position: fixed;
+figure, .sidenav, #lounger, #experience, #shop, header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-header {
-  top: 0;
-}
-
-header ul {
-  overflow: hidden;
-}
-
-.menu {
-  clear: both;
-  max-height: 0;
-  -webkit-transition: max-height .2s ease-out;
-  transition: max-height .2s ease-out;
-}
-
-.menu-icon {
-  float: right;
-  padding: 30px 20px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.menu-icon .navicon {
-  background: #ebccc2;
-  display: block;
-  height: 2px;
-  position: relative;
-  -webkit-transition: background .2s ease-out;
-  transition: background .2s ease-out;
-  width: 18px;
-}
-
-.menu-icon .navicon:before,
-.menu-icon .navicon:after {
-  background: #ebccc2;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.menu-icon .navicon:before {
-  top: 5px;
-}
-
-.menu-icon .navicon:after {
-  top: -5px;
-}
-
-.menu-btn {
-  display: none;
-}
-
-.menu-btn:checked ~ .menu {
-  max-height: 240px;
-}
-
-.menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
-
-.menu-btn:checked ~ .menu-icon .navicon:before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.menu-btn:checked ~ .menu-icon .navicon:after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-@media (min-width: 789px) {
-  .menu {
-    clear: none;
-    max-height: none;
+@media (max-width: 425px) {
+  .exFigStyle,
+  #lounger, #experience, #shop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
-  .menu-icon {
-    display: none;
+  .exFigStyle p,
+  #lounger p, #experience p, #shop p {
+    margin-bottom: 5%;
+  }
+  .exFigStyle figcaption,
+  #lounger figcaption, #experience figcaption, #shop figcaption {
+    padding: 5% 0;
   }
 }
 
 .sidenav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -217,7 +151,7 @@ header ul {
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 456px) {
   h1, h2 {
     font-size: 2.5rem;
   }
@@ -243,9 +177,6 @@ header ul {
     padding: 2% 3%;
   }
   header ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -313,9 +244,6 @@ header ul {
   }
   #about figure,
   #inspiration figure {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -341,9 +269,6 @@ header ul {
   #lounger,
   #experience,
   #shop {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     overflow: hidden;
   }
   #lounger > img,
