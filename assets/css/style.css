@@ -277,6 +277,7 @@ footer li {
 footer li ::before {
   content: "\25EF";
   position: absolute;
+  color: #737373;
   left: 10.5%;
 }
 
@@ -294,7 +295,11 @@ footer li:not(:last-child)::after {
   left: 15%;
 }
 
-footer a::after {
+footer .currentSite {
+  color: #fff;
+}
+
+footer .currentSite::after {
   content: "\25CC";
   font-size: 1.6rem;
   position: absolute;
