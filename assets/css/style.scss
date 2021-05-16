@@ -12,7 +12,8 @@
 
 // color elements
 
-body {
+body,
+.sidenav {
     background-color: #2e2e2e;
 }
 
@@ -20,14 +21,15 @@ header a {
     color: #867772;
 }
 
-h1, h2, h3{
-    color: #ebccc2;
-}
-
 p,
 input[type="button"],
-footer a {
+footer a,
+.sidenav a {
     color: #737373;
+}
+
+h1, h2, h3, h4, a.closebtn{
+    color: #ebccc2;
 }
 
 // sticky elements
@@ -55,7 +57,310 @@ p {
     font-size: 1.2rem;
 }
 
-// hover elements
+// // hover elements
+
+// a {
+//     cursor: pointer;
+//     transition: all 1s;
+// }
+
+// a:hover {
+//     color: #fff;
+// }
+
+// header a:hover {
+//     text-decoration: underline;
+// }
+
+// // header style
+
+// header {
+//     width: 100%;
+//     padding: 2% 3%;
+
+//     ul {
+//         display: flex;
+//         align-items: center;
+//         width: 100%;
+//     }
+
+//     li {
+//         font-size: .8rem;
+//     }
+
+//     li:nth-of-type(1) {
+//         flex-grow: 1;
+//     }
+
+//     li:nth-of-type(2) {
+//         margin-right: 3%;
+//     }
+
+//     li:nth-of-type(3),
+//     li:nth-of-type(4),
+//     li:nth-of-type(5) {
+//         margin: 0 1%;
+//     }
+
+//     li:nth-of-type(6) {
+//         margin: 0 3% 0 3%;
+//     }
+// }
+
+// // about and inspiration site style
+
+// #about {
+//     width: 90%;
+// }
+
+// #inspiration {
+//     width: 60%;
+// }
+
+// #about,
+// #inspiration {
+//     padding: 10% 0;
+//     margin: 0 auto;
+
+//     > video {
+//         width: 90%;
+//         margin: 0 5% 10%;
+//     }
+
+//     > img {
+//         width: 100%;
+//         margin-bottom: 10%;
+//     }
+
+//     h1 {
+//         margin: 0 0 10% 28%;
+//         width: 35%;
+//     }
+
+//     h2 {
+//         margin-bottom: 5%;
+//     }
+
+//     h3 {
+//         margin-bottom: 1.5%;
+//     }
+
+//     input[type="button"] {
+//         background-color: transparent;
+//         border: 1px solid #fff;
+//         padding: 0.5% 1.5%;
+//         margin-bottom: 1.5%;
+//     }
+
+//     > p {
+//         margin-bottom: 10%;
+//     }
+    
+//     .exFigStyle {
+//         width: 80%;
+//     }
+
+//     figure {
+//         display: flex;
+//         align-items: center;
+//         margin: 0 auto;
+
+//         img {
+//             width: 50%;
+//         }
+
+//         figcaption {
+//             padding-left: 10%;
+
+//             p {
+//                 line-height: 3vh;
+//                 margin-bottom: 2%;
+//             }
+//         }
+
+//         .capExStyle {
+//             padding-left: 5%;        
+//         }
+//     }
+// }
+
+// // lounger, experience and shop site style
+
+// #lounger,
+// #experience,
+// #shop  {
+//     display: flex;
+//     overflow: hidden;
+
+//     > img {
+//         width: 60%;
+//         height: 100vh;
+//         object-fit: cover;
+//     }
+
+//     .louExStyle,
+//     .shopStyle {
+//         padding: 0 5%;
+//     }
+
+//     .louExStyle {
+//         padding-top: 10%;
+
+//         h2 {
+//             margin-bottom: 20%;
+//         }
+
+//         p {
+//             margin-bottom: 2%
+//         }
+//     }
+
+//     .shopStyle {
+//         padding-top: 5%;
+//         text-align: center;
+
+//         h2 {
+//             margin-bottom: 5%;
+//         }
+
+//         p {
+//             margin-bottom: 5%;
+//         }
+
+//         a {
+//             background-color: #ebccc2;
+//             padding: 2% 4%;
+//             border-radius: 5px;
+//             font-weight: normal;
+//             margin-top: 10vh;
+//             color: #2e2e2e;
+//         }
+//     }
+// }
+
+// // footer navi stlye
+
+// footer {
+//     bottom: 15%;
+
+//     li {
+//         margin-bottom: 10vh;
+//         position: relative;
+
+//         ::before {
+//             content: "\25EF";
+//             color: #737373;
+//             position: absolute;
+//             left: 10.5%;
+//         }
+        
+//         a {
+//             margin-left: 5vw;
+//         }
+
+//     }
+
+//     li:not(:last-child)::after {
+//         content: "";
+//         width: 1px;
+//         height: 50px;
+//         background-color: #737373;
+//         position: absolute;
+//         top: 3vh;
+//         left: 15%;
+//     }
+
+//     .currentSite {
+//         color: #fff;
+//     }
+
+//     .currentSite::after {
+//         content: "\25CC";
+//         font-size: 1.6rem;
+//         color: #fff;
+//         position: absolute;
+//         left: .9vw;
+//         top: -.9vh;
+//         animation: spin 5s linear infinite;
+
+//         @keyframes spin { 
+//             100% { 
+//               transform: rotateZ(360deg); 
+//             }
+//         }
+//     }
+// }
+
+// Subscribe and Contact style
+
+.sidenav {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+
+    h4 {
+        margin-top: 5%;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    iframe {
+        margin-bottom: 10%;
+    }
+
+    section {
+        width: 88%;
+
+        input#email {
+            padding: 2%;
+            width: 100%;
+            margin-top: 10%;
+        }
+
+        input[type="button"] {
+            background-color: #ebccc2;
+            padding: 2%;
+            width: 100%;
+            border: 1px solid #ebccc2;
+            border-radius: 5px;
+            font-weight: normal;
+            margin-top: 5%;
+            color: #2e2e2e;
+        }
+    }
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    font-size: 36px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+@media (min-width: 426px) {
+    // hover elements
 
 a {
     cursor: pointer;
@@ -247,8 +552,8 @@ footer {
 
         ::before {
             content: "\25EF";
-            position: absolute;
             color: #737373;
+            position: absolute;
             left: 10.5%;
         }
         
@@ -275,10 +580,10 @@ footer {
     .currentSite::after {
         content: "\25CC";
         font-size: 1.6rem;
+        color: #fff;
         position: absolute;
         left: .9vw;
         top: -.9vh;
-        color: #fff;
         animation: spin 5s linear infinite;
 
         @keyframes spin { 
@@ -287,7 +592,5 @@ footer {
             }
         }
     }
-
-    
-
+}
 }

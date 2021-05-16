@@ -9,7 +9,8 @@
   font-weight: 300;
 }
 
-body {
+body,
+.sidenav {
   background-color: #2e2e2e;
 }
 
@@ -17,14 +18,15 @@ header a {
   color: #867772;
 }
 
-h1, h2, h3 {
-  color: #ebccc2;
-}
-
 p,
 input[type="button"],
-footer a {
+footer a,
+.sidenav a {
   color: #737373;
+}
+
+h1, h2, h3, h4, a.closebtn {
+  color: #ebccc2;
 }
 
 header,
@@ -48,282 +50,318 @@ p {
   font-size: 1.2rem;
 }
 
-a {
-  cursor: pointer;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-a:hover {
-  color: #fff;
-}
-
-header a:hover {
-  text-decoration: underline;
-}
-
-header {
-  width: 100%;
-  padding: 2% 3%;
-}
-
-header ul {
+.sidenav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-header li {
-  font-size: .8rem;
+.sidenav h4 {
+  margin-top: 5%;
 }
 
-header li:nth-of-type(1) {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+.sidenav p {
+  font-size: 1rem;
 }
 
-header li:nth-of-type(2) {
-  margin-right: 3%;
-}
-
-header li:nth-of-type(3),
-header li:nth-of-type(4),
-header li:nth-of-type(5) {
-  margin: 0 1%;
-}
-
-header li:nth-of-type(6) {
-  margin: 0 3% 0 3%;
-}
-
-#about {
-  width: 90%;
-}
-
-#inspiration {
-  width: 60%;
-}
-
-#about,
-#inspiration {
-  padding: 10% 0;
-  margin: 0 auto;
-}
-
-#about > video,
-#inspiration > video {
-  width: 90%;
-  margin: 0 5% 10%;
-}
-
-#about > img,
-#inspiration > img {
-  width: 100%;
+.sidenav iframe {
   margin-bottom: 10%;
 }
 
-#about h1,
-#inspiration h1 {
-  margin: 0 0 10% 28%;
-  width: 35%;
+.sidenav section {
+  width: 88%;
 }
 
-#about h2,
-#inspiration h2 {
-  margin-bottom: 5%;
+.sidenav section input#email {
+  padding: 2%;
+  width: 100%;
+  margin-top: 10%;
 }
 
-#about h3,
-#inspiration h3 {
-  margin-bottom: 1.5%;
-}
-
-#about input[type="button"],
-#inspiration input[type="button"] {
-  background-color: transparent;
-  border: 1px solid #fff;
-  padding: 0.5% 1.5%;
-  margin-bottom: 1.5%;
-}
-
-#about > p,
-#inspiration > p {
-  margin-bottom: 10%;
-}
-
-#about .exFigStyle,
-#inspiration .exFigStyle {
-  width: 80%;
-}
-
-#about figure,
-#inspiration figure {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 auto;
-}
-
-#about figure img,
-#inspiration figure img {
-  width: 50%;
-}
-
-#about figure figcaption,
-#inspiration figure figcaption {
-  padding-left: 10%;
-}
-
-#about figure figcaption p,
-#inspiration figure figcaption p {
-  line-height: 3vh;
-  margin-bottom: 2%;
-}
-
-#about figure .capExStyle,
-#inspiration figure .capExStyle {
-  padding-left: 5%;
-}
-
-#lounger,
-#experience,
-#shop {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-}
-
-#lounger > img,
-#experience > img,
-#shop > img {
-  width: 60%;
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-#lounger .louExStyle,
-#lounger .shopStyle,
-#experience .louExStyle,
-#experience .shopStyle,
-#shop .louExStyle,
-#shop .shopStyle {
-  padding: 0 5%;
-}
-
-#lounger .louExStyle,
-#experience .louExStyle,
-#shop .louExStyle {
-  padding-top: 10%;
-}
-
-#lounger .louExStyle h2,
-#experience .louExStyle h2,
-#shop .louExStyle h2 {
-  margin-bottom: 20%;
-}
-
-#lounger .louExStyle p,
-#experience .louExStyle p,
-#shop .louExStyle p {
-  margin-bottom: 2%;
-}
-
-#lounger .shopStyle,
-#experience .shopStyle,
-#shop .shopStyle {
-  padding-top: 5%;
-  text-align: center;
-}
-
-#lounger .shopStyle h2,
-#experience .shopStyle h2,
-#shop .shopStyle h2 {
-  margin-bottom: 5%;
-}
-
-#lounger .shopStyle p,
-#experience .shopStyle p,
-#shop .shopStyle p {
-  margin-bottom: 5%;
-}
-
-#lounger .shopStyle a,
-#experience .shopStyle a,
-#shop .shopStyle a {
+.sidenav section input[type="button"] {
   background-color: #ebccc2;
-  padding: 2% 4%;
+  padding: 2%;
+  width: 100%;
+  border: 1px solid #ebccc2;
   border-radius: 5px;
   font-weight: normal;
-  margin-top: 10vh;
+  margin-top: 5%;
   color: #2e2e2e;
 }
 
-footer {
-  bottom: 15%;
-}
-
-footer li {
-  margin-bottom: 10vh;
-  position: relative;
-}
-
-footer li ::before {
-  content: "\25EF";
+.sidenav .closebtn {
   position: absolute;
-  color: #737373;
-  left: 10.5%;
+  top: 1%;
+  left: 5%;
+  font-size: 36px;
 }
 
-footer li a {
-  margin-left: 5vw;
+#main {
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
+  padding: 20px;
 }
 
-footer li:not(:last-child)::after {
-  content: "";
-  width: 1px;
-  height: 50px;
-  background-color: #737373;
-  position: absolute;
-  top: 3vh;
-  left: 15%;
-}
-
-footer .currentSite {
-  color: #fff;
-}
-
-footer .currentSite::after {
-  content: "\25CC";
-  font-size: 1.6rem;
-  position: absolute;
-  left: .9vw;
-  top: -.9vh;
-  color: #fff;
-  -webkit-animation: spin 5s linear infinite;
-          animation: spin 5s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
   }
 }
 
-@keyframes spin {
-  100% {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
+@media (min-width: 426px) {
+  a {
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  a:hover {
+    color: #fff;
+  }
+  header a:hover {
+    text-decoration: underline;
+  }
+  header {
+    width: 100%;
+    padding: 2% 3%;
+  }
+  header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  header li {
+    font-size: .8rem;
+  }
+  header li:nth-of-type(1) {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  header li:nth-of-type(2) {
+    margin-right: 3%;
+  }
+  header li:nth-of-type(3),
+  header li:nth-of-type(4),
+  header li:nth-of-type(5) {
+    margin: 0 1%;
+  }
+  header li:nth-of-type(6) {
+    margin: 0 3% 0 3%;
+  }
+  #about {
+    width: 90%;
+  }
+  #inspiration {
+    width: 60%;
+  }
+  #about,
+  #inspiration {
+    padding: 10% 0;
+    margin: 0 auto;
+  }
+  #about > video,
+  #inspiration > video {
+    width: 90%;
+    margin: 0 5% 10%;
+  }
+  #about > img,
+  #inspiration > img {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  #about h1,
+  #inspiration h1 {
+    margin: 0 0 10% 28%;
+    width: 35%;
+  }
+  #about h2,
+  #inspiration h2 {
+    margin-bottom: 5%;
+  }
+  #about h3,
+  #inspiration h3 {
+    margin-bottom: 1.5%;
+  }
+  #about input[type="button"],
+  #inspiration input[type="button"] {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 0.5% 1.5%;
+    margin-bottom: 1.5%;
+  }
+  #about > p,
+  #inspiration > p {
+    margin-bottom: 10%;
+  }
+  #about .exFigStyle,
+  #inspiration .exFigStyle {
+    width: 80%;
+  }
+  #about figure,
+  #inspiration figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+  }
+  #about figure img,
+  #inspiration figure img {
+    width: 50%;
+  }
+  #about figure figcaption,
+  #inspiration figure figcaption {
+    padding-left: 10%;
+  }
+  #about figure figcaption p,
+  #inspiration figure figcaption p {
+    line-height: 3vh;
+    margin-bottom: 2%;
+  }
+  #about figure .capExStyle,
+  #inspiration figure .capExStyle {
+    padding-left: 5%;
+  }
+  #lounger,
+  #experience,
+  #shop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+  }
+  #lounger > img,
+  #experience > img,
+  #shop > img {
+    width: 60%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #lounger .louExStyle,
+  #lounger .shopStyle,
+  #experience .louExStyle,
+  #experience .shopStyle,
+  #shop .louExStyle,
+  #shop .shopStyle {
+    padding: 0 5%;
+  }
+  #lounger .louExStyle,
+  #experience .louExStyle,
+  #shop .louExStyle {
+    padding-top: 10%;
+  }
+  #lounger .louExStyle h2,
+  #experience .louExStyle h2,
+  #shop .louExStyle h2 {
+    margin-bottom: 20%;
+  }
+  #lounger .louExStyle p,
+  #experience .louExStyle p,
+  #shop .louExStyle p {
+    margin-bottom: 2%;
+  }
+  #lounger .shopStyle,
+  #experience .shopStyle,
+  #shop .shopStyle {
+    padding-top: 5%;
+    text-align: center;
+  }
+  #lounger .shopStyle h2,
+  #experience .shopStyle h2,
+  #shop .shopStyle h2 {
+    margin-bottom: 5%;
+  }
+  #lounger .shopStyle p,
+  #experience .shopStyle p,
+  #shop .shopStyle p {
+    margin-bottom: 5%;
+  }
+  #lounger .shopStyle a,
+  #experience .shopStyle a,
+  #shop .shopStyle a {
+    background-color: #ebccc2;
+    padding: 2% 4%;
+    border-radius: 5px;
+    font-weight: normal;
+    margin-top: 10vh;
+    color: #2e2e2e;
+  }
+  footer {
+    bottom: 15%;
+  }
+  footer li {
+    margin-bottom: 10vh;
+    position: relative;
+  }
+  footer li ::before {
+    content: "\25EF";
+    color: #737373;
+    position: absolute;
+    left: 10.5%;
+  }
+  footer li a {
+    margin-left: 5vw;
+  }
+  footer li:not(:last-child)::after {
+    content: "";
+    width: 1px;
+    height: 50px;
+    background-color: #737373;
+    position: absolute;
+    top: 3vh;
+    left: 15%;
+  }
+  footer .currentSite {
+    color: #fff;
+  }
+  footer .currentSite::after {
+    content: "\25CC";
+    font-size: 1.6rem;
+    color: #fff;
+    position: absolute;
+    left: .9vw;
+    top: -.9vh;
+    -webkit-animation: spin 5s linear infinite;
+            animation: spin 5s linear infinite;
+  }
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotateZ(360deg);
+              transform: rotateZ(360deg);
+    }
+  }
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotateZ(360deg);
+              transform: rotateZ(360deg);
+    }
   }
 }
 /*# sourceMappingURL=style.css.map */

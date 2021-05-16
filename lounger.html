@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <li><a href="#"><img src="./assets/img/logo.svg" alt="logo"></a></li>
-                <li><a href="contact.html">Subscribe & Contact</a></li>
+                <li><a onclick="openNav()">Subscribe & Contact</a></li>
                 <li><a href="#">Facebook</a></li>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">YouTube</a></li>
@@ -24,6 +24,26 @@
             </ul>
         </nav>
     </header>
+    <aside id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.2633950807003!2d6.788122315965019!3d51.251059537233985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8c9335897e4f7%3A0x60df231846500efd!2sSuperCode%20GmbH%20%26%20Co.%20KG!5e0!3m2!1sde!2sde!4v1621165099722!5m2!1sde!2sde"
+            width="285" height="280" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <section>
+            <h4>Straße:</h4>
+            <p>Vollepunktezahl Straße</p>
+            <h4>Hausnummer:</h4>
+            <p>100%</p>
+            <h4>Postsleitezahl:</h4>
+            <p>10100</p>
+            <h4>Tel.:</h4>
+            <p>100 123 456</p>
+            <form action="#">
+                <input type="email" name="E-Mail" id="email" placeholder="E-Mail">
+                <input type="button" value="Subscribe">
+            </form>
+        </section>
+    </aside>
     <main id="lounger">
         <img src="./assets/img/lounger-img.jpg" alt="">
         <section class="louExStyle">
