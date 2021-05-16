@@ -18,10 +18,7 @@ header a {
   color: #867772;
 }
 
-p,
-input[type="button"],
-footer a,
-.sidenav a {
+p, input[type="button"], footer a, .sidenav a {
   color: #737373;
 }
 
@@ -29,8 +26,25 @@ h1, h2, h3, h4, a.closebtn {
   color: #ebccc2;
 }
 
-header,
-footer {
+#about,
+#inspiration {
+  width: 90%;
+  padding: 10% 0;
+  margin: 0 auto;
+}
+
+#about img,
+#inspiration img {
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+#about h1,
+#inspiration h1 {
+  margin-bottom: 10%;
+}
+
+header, footer {
   position: fixed;
 }
 
@@ -38,16 +52,91 @@ header {
   top: 0;
 }
 
-h1, h2 {
-  font-size: 2.5rem;
+header ul {
+  overflow: hidden;
 }
 
-h3 {
-  font-size: 1.3rem;
+.menu {
+  clear: both;
+  max-height: 0;
+  -webkit-transition: max-height .2s ease-out;
+  transition: max-height .2s ease-out;
 }
 
-p {
-  font-size: 1.2rem;
+.menu-icon {
+  float: right;
+  padding: 30px 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.menu-icon .navicon {
+  background: #ebccc2;
+  display: block;
+  height: 2px;
+  position: relative;
+  -webkit-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+  background: #ebccc2;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.menu-icon .navicon:before {
+  top: 5px;
+}
+
+.menu-icon .navicon:after {
+  top: -5px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media (min-width: 789px) {
+  .menu {
+    clear: none;
+    max-height: none;
+  }
+  .menu-icon {
+    display: none;
+  }
 }
 
 .sidenav {
@@ -61,7 +150,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
+  height: 100vh;
   width: 0;
   position: fixed;
   z-index: 1;
@@ -128,7 +217,16 @@ p {
   }
 }
 
-@media (min-width: 426px) {
+@media (min-width: 1025px) {
+  h1, h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
   a {
     cursor: pointer;
     -webkit-transition: all 1s;
@@ -172,16 +270,8 @@ p {
   header li:nth-of-type(6) {
     margin: 0 3% 0 3%;
   }
-  #about {
-    width: 90%;
-  }
   #inspiration {
     width: 60%;
-  }
-  #about,
-  #inspiration {
-    padding: 10% 0;
-    margin: 0 auto;
   }
   #about > video,
   #inspiration > video {
@@ -195,7 +285,7 @@ p {
   }
   #about h1,
   #inspiration h1 {
-    margin: 0 0 10% 28%;
+    margin-left: 28%;
     width: 35%;
   }
   #about h2,
