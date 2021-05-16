@@ -10,10 +10,10 @@
     font-weight: 300;
 }
 
+
 // color setup
 
-body,
-.sidenav {
+body, .sidenav {
     background-color: #2e2e2e;
 }
 
@@ -29,10 +29,10 @@ h1, h2, h3, h4, a.closebtn {
     color: #ebccc2;
 }
 
+
 // all screens setup
 
-#about,
-#inspiration {
+#about, #inspiration {
     width: 90%;
     padding: 10% 0;
     margin: 0 auto;
@@ -53,17 +53,21 @@ h1, h2, h3, h4, a.closebtn {
     margin-bottom: 1.5%;
 }
 
+
 // header
+
 header {
     width: 100%;
     padding: 2% 3%;
 }
+
 
 // margin
 
 h2, p {
     margin-bottom: 5%;
 }
+
 
 // shop
 
@@ -83,17 +87,20 @@ h2, p {
     }
 }
 
+
 // flex
 
 figure, .sidenav, #lounger, #experience, #shop, header ul {
     display: flex;
 }
 
+
 // align items
 
  header ul, .sidenav {
     align-items: center;
  }
+
 
 // Subscribe and Contact
 
@@ -154,16 +161,22 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
     font-size: 36px;
 }
 
+
 // mobile divices setup
 
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav {
+        padding-top: 15px;
+        a {
+            font-size: 18px;
+        }
+    }
 }
+
 
 @media (max-width: 768px) {
 
-    // header
+// header
 
     header {
         ul {
@@ -186,7 +199,8 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         }
     }
 
-    // mobile only
+
+// mobile only
 
     #lounger,
     #experience,
@@ -220,7 +234,7 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         }
     }
 
-    // footer
+// footer
 
     footer ul {
         display: flex;
@@ -233,11 +247,13 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
     }
 }
 
+
 // above mobile divices setup
 
 @media (min-width: 787px) {
 
-    // sticky elements
+
+// sticky elements
 
     header, footer {
         position: fixed;
@@ -247,7 +263,8 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         top: 0;
     }
     
-    // font sizes
+
+// font sizes
 
     h1, h2 {
         font-size: 2.5rem;
@@ -261,7 +278,8 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         font-size: 1.2rem;
     }
 
-    // hover elements
+
+// hover elements
 
     a {
         cursor: pointer;
@@ -276,7 +294,8 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         text-decoration: underline;
     }
 
-    // header style
+
+// header style
 
     header {
         ul {
@@ -306,7 +325,8 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         }
     }
 
-    // about and inspiration site
+
+// about and inspiration site
 
     #inspiration {
         width: 60%;
@@ -365,7 +385,8 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         }
     }
 
-    // lounger, experience and shop site
+
+// lounger, experience and shop site
 
     #lounger,
     #experience,
@@ -400,7 +421,8 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         }
     }
 
-    // footer navi
+
+// footer navi
 
     footer {
         bottom: 15%;

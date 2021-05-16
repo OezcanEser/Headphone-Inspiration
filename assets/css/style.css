@@ -9,8 +9,7 @@
   font-weight: 300;
 }
 
-body,
-.sidenav {
+body, .sidenav {
   background-color: #2e2e2e;
 }
 
@@ -26,20 +25,17 @@ h1, h2, h3, h4, a.closebtn {
   color: #ebccc2;
 }
 
-#about,
-#inspiration {
+#about, #inspiration {
   width: 90%;
   padding: 10% 0;
   margin: 0 auto;
 }
 
-#about img,
-#inspiration img {
+#about img, #inspiration img {
   width: 100%;
 }
 
-#about h1,
-#inspiration h1 {
+#about h1, #inspiration h1 {
   margin-bottom: 10%;
 }
 
