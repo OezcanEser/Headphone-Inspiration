@@ -59,19 +59,19 @@ header {
     padding: 2% 3%;
 }
 
+// margin
+
+h2, p {
+    margin-bottom: 5%;
+}
+
 // shop
 
 .shopStyle {
     padding-top: 5%;
     text-align: center;
 
-    h2 {
-        margin-bottom: 5%;
-    }
 
-    p {
-        margin-bottom: 5%;
-    }
 
     a {
         background-color: #ebccc2;
@@ -209,10 +209,6 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         flex-direction: column-reverse;
         margin-bottom: 5%;
 
-        p {
-            margin-bottom: 5%;
-        }
-
         figcaption {
             padding: 5% 0;
         }
@@ -332,10 +328,6 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         h1 {
             margin-left: 28%;
             width: 35%;
-        }
-
-        h2 {
-            margin-bottom: 5%;
         }
 
         h3 {

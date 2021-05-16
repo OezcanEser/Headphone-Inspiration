@@ -55,17 +55,13 @@ header {
   padding: 2% 3%;
 }
 
+h2, p {
+  margin-bottom: 5%;
+}
+
 .shopStyle {
   padding-top: 5%;
   text-align: center;
-}
-
-.shopStyle h2 {
-  margin-bottom: 5%;
-}
-
-.shopStyle p {
-  margin-bottom: 5%;
 }
 
 .shopStyle a {
@@ -199,9 +195,6 @@ header ul, .sidenav {
             flex-direction: column-reverse;
     margin-bottom: 5%;
   }
-  .exFigStyle p, #inspiration figure p, #lounger p, #experience p, #shop p {
-    margin-bottom: 5%;
-  }
   .exFigStyle figcaption, #inspiration figure figcaption, #lounger figcaption, #experience figcaption, #shop figcaption {
     padding: 5% 0;
   }
@@ -289,10 +282,6 @@ header ul, .sidenav {
   #inspiration h1 {
     margin-left: 28%;
     width: 35%;
-  }
-  #about h2,
-  #inspiration h2 {
-    margin-bottom: 5%;
   }
   #about h3,
   #inspiration h3 {
