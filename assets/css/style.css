@@ -160,7 +160,7 @@ header ul, .sidenav {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   header ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -208,9 +208,18 @@ header ul, .sidenav {
   #inspiration > video {
     width: 100%;
   }
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-bottom: 5%;
+  }
 }
 
-@media (min-width: 456px) {
+@media (min-width: 787px) {
   header, footer {
     position: fixed;
   }

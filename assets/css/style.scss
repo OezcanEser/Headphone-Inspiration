@@ -175,15 +175,9 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
 
 
 
-
-
-
-
-
-
 // mobile divices
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     header {
         ul {
             justify-content: space-between;
@@ -239,13 +233,19 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
             width: 100%;
         }
     }
+
+    footer ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 5%;
+    }
 }
 
 
 
 // above mobile divices
 
-@media (min-width: 456px) {
+@media (min-width: 787px) {
 
     // sticky elements
 
