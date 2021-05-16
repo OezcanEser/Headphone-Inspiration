@@ -29,17 +29,6 @@ h1, h2, h3, h4, a.closebtn {
     color: #ebccc2;
 }
 
-// sticky elements
-
-header, footer {
-    position: fixed;
-}
-
-header {
-    width: 100%;
-    top: 0;
-}
-
 // all screen style
 
 #about,
@@ -63,20 +52,16 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
     display: flex;
 }
 
+// align items
 
-@media (max-width: 425px) {
-    .exFigStyle,
-    #lounger, #experience, #shop {
-        flex-direction: column-reverse;
+ header ul, .sidenav {
+    align-items: center;
+ }
 
-        p {
-            margin-bottom: 5%;
-        }
-
-        figcaption {
-            padding: 5% 0;
-        }
-    }
+// header style
+header {
+    width: 100%;
+    padding: 2% 3%;
 }
 
 
@@ -84,7 +69,6 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
 
 .sidenav {
     flex-flow: column;
-    align-items: center;
     height: 100vh;
     width: 0;
     position: fixed;
@@ -146,12 +130,47 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
     .sidenav a {font-size: 18px;}
 }
 
+#inspiration input[type="button"] {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 0.5% 1.5%;
+    margin-bottom: 1.5%;
+}
 
+// mobile divices
 
+@media (max-width: 425px) {
+    .exFigStyle, #inspiration figure, #lounger, #experience, #shop {
+        flex-direction: column-reverse;
+        margin-bottom: 5%;
 
-// Laptop L - 1440px width
+        p {
+            margin-bottom: 5%;
+        }
+
+        figcaption {
+            padding: 5% 0;
+        }
+    }
+    #inspiration {
+        > video {
+            width: 100%;
+        }}
+}
+
+// above mobile divices
 
 @media (min-width: 456px) {
+
+    // sticky elements
+
+    header, footer {
+        position: fixed;
+    }
+
+    header {
+        top: 0;
+    }
     
     // font sizes
 
@@ -185,11 +204,7 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
     // header style
 
     header {
-        width: 100%;
-        padding: 2% 3%;
-
         ul {
-            align-items: center;
             width: 100%;
         }
 
@@ -245,13 +260,6 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
         }
 
         h3 {
-            margin-bottom: 1.5%;
-        }
-
-        input[type="button"] {
-            background-color: transparent;
-            border: 1px solid #fff;
-            padding: 0.5% 1.5%;
             margin-bottom: 1.5%;
         }
 
