@@ -43,6 +43,40 @@ h1, h2, h3, h4, a.closebtn {
   margin-bottom: 10%;
 }
 
+#inspiration input[type="button"] {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 0.5% 1.5%;
+  margin-bottom: 1.5%;
+}
+
+header {
+  width: 100%;
+  padding: 2% 3%;
+}
+
+.shopStyle {
+  padding-top: 5%;
+  text-align: center;
+}
+
+.shopStyle h2 {
+  margin-bottom: 5%;
+}
+
+.shopStyle p {
+  margin-bottom: 5%;
+}
+
+.shopStyle a {
+  background-color: #ebccc2;
+  padding: 2% 4%;
+  border-radius: 5px;
+  font-weight: normal;
+  margin-top: 10vh;
+  color: #2e2e2e;
+}
+
 figure, .sidenav, #lounger, #experience, #shop, header ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,11 +87,6 @@ header ul, .sidenav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-header {
-  width: 100%;
-  padding: 2% 3%;
 }
 
 .sidenav {
@@ -110,17 +139,16 @@ header {
   color: #2e2e2e;
 }
 
+.sidenav section img {
+  width: 10%;
+  margin: 10%;
+}
+
 .sidenav .closebtn {
   position: absolute;
   top: 1%;
   left: 5%;
   font-size: 36px;
-}
-
-#main {
-  -webkit-transition: margin-left .5s;
-  transition: margin-left .5s;
-  padding: 20px;
 }
 
 @media screen and (max-height: 450px) {
@@ -132,14 +160,38 @@ header {
   }
 }
 
-#inspiration input[type="button"] {
-  background-color: transparent;
-  border: 1px solid #fff;
-  padding: 0.5% 1.5%;
-  margin-bottom: 1.5%;
-}
-
 @media (max-width: 425px) {
+  header ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header li:nth-of-type(2) {
+    background-color: #ebccc2;
+    padding: 2% 4%;
+    border-radius: 5px;
+    font-weight: 900;
+    color: #2e2e2e;
+  }
+  header li:nth-of-type(3),
+  header li:nth-of-type(4),
+  header li:nth-of-type(5),
+  header li:nth-of-type(6) {
+    display: none;
+  }
+  #lounger,
+  #experience,
+  #shop {
+    width: 90%;
+    padding: 10% 0;
+    margin: 0 auto;
+  }
+  #shop > img {
+    display: none;
+  }
+  #shop img {
+    width: 100%;
+  }
   .exFigStyle, #inspiration figure, #lounger, #experience, #shop {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -305,27 +357,6 @@ header {
   #experience .shopStyle,
   #shop .shopStyle {
     padding-top: 5%;
-    text-align: center;
-  }
-  #lounger .shopStyle h2,
-  #experience .shopStyle h2,
-  #shop .shopStyle h2 {
-    margin-bottom: 5%;
-  }
-  #lounger .shopStyle p,
-  #experience .shopStyle p,
-  #shop .shopStyle p {
-    margin-bottom: 5%;
-  }
-  #lounger .shopStyle a,
-  #experience .shopStyle a,
-  #shop .shopStyle a {
-    background-color: #ebccc2;
-    padding: 2% 4%;
-    border-radius: 5px;
-    font-weight: normal;
-    margin-top: 10vh;
-    color: #2e2e2e;
   }
   footer {
     bottom: 15%;

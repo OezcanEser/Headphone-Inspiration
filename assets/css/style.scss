@@ -10,6 +10,8 @@
     font-weight: 300;
 }
 
+
+
 // color elements
 
 body,
@@ -29,7 +31,9 @@ h1, h2, h3, h4, a.closebtn {
     color: #ebccc2;
 }
 
-// all screen style
+
+
+// all screens style
 
 #about,
 #inspiration {
@@ -46,11 +50,56 @@ h1, h2, h3, h4, a.closebtn {
 
 }
 
+#inspiration input[type="button"] {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 0.5% 1.5%;
+    margin-bottom: 1.5%;
+}
+
+
+
+// header style
+header {
+    width: 100%;
+    padding: 2% 3%;
+}
+
+
+
+// shop style
+
+.shopStyle {
+    padding-top: 5%;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 5%;
+    }
+
+    p {
+        margin-bottom: 5%;
+    }
+
+    a {
+        background-color: #ebccc2;
+        padding: 2% 4%;
+        border-radius: 5px;
+        font-weight: normal;
+        margin-top: 10vh;
+        color: #2e2e2e;
+    }
+}
+
+
+
 // flex style
 
 figure, .sidenav, #lounger, #experience, #shop, header ul {
     display: flex;
 }
+
+
 
 // align items
 
@@ -58,11 +107,6 @@ figure, .sidenav, #lounger, #experience, #shop, header ul {
     align-items: center;
  }
 
-// header style
-header {
-    width: 100%;
-    padding: 2% 3%;
-}
 
 
 // Subscribe and Contact style
@@ -110,6 +154,10 @@ header {
             margin-top: 5%;
             color: #2e2e2e;
         }
+        img {
+            width: 10%;
+            margin: 10%;
+        }
     }
 }
   
@@ -120,26 +168,60 @@ header {
     font-size: 36px;
 }
 
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
-}
-
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
 
-#inspiration input[type="button"] {
-    background-color: transparent;
-    border: 1px solid #fff;
-    padding: 0.5% 1.5%;
-    margin-bottom: 1.5%;
-}
+
+
+
+
+
+
+
 
 // mobile divices
 
 @media (max-width: 425px) {
+    header {
+        ul {
+            justify-content: space-between;
+        }
+
+        li:nth-of-type(2) {
+            background-color: #ebccc2;
+            padding: 2% 4%;
+            border-radius: 5px;
+            font-weight: 900;
+            color: #2e2e2e;
+        }
+
+        li:nth-of-type(3),
+        li:nth-of-type(4),
+        li:nth-of-type(5),
+        li:nth-of-type(6) {
+        display: none;
+        }
+    }
+
+    #lounger,
+    #experience,
+    #shop {
+        width: 90%;
+        padding: 10% 0;
+        margin: 0 auto;
+    }
+
+    #shop {
+        > img{
+            display: none;
+        }
+        img {
+            width: 100%;
+        }
+    }
+
     .exFigStyle, #inspiration figure, #lounger, #experience, #shop {
         flex-direction: column-reverse;
         margin-bottom: 5%;
@@ -155,8 +237,11 @@ header {
     #inspiration {
         > video {
             width: 100%;
-        }}
+        }
+    }
 }
+
+
 
 // above mobile divices
 
@@ -326,24 +411,6 @@ header {
 
         .shopStyle {
             padding-top: 5%;
-            text-align: center;
-
-            h2 {
-                margin-bottom: 5%;
-            }
-
-            p {
-                margin-bottom: 5%;
-            }
-
-            a {
-                background-color: #ebccc2;
-                padding: 2% 4%;
-                border-radius: 5px;
-                font-weight: normal;
-                margin-top: 10vh;
-                color: #2e2e2e;
-            }
         }
     }
 
